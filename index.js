@@ -3,19 +3,19 @@ const chalk = require('chalk');
 var scoreboard = 0
 
 function welcomeMessage(){
-var userName = readlineSync.question(chalk.bold.red("What's your Hero name ") + chalk.bold.white.bgRed("Challenger?\n"));
-console.log(chalk.bold.blue("Welcome to The MCU ")+chalk.bold.white.bgBlue(userName)+"!!\n");
+var userName = readlineSync.question(chalk.bold.red("Hi!, What's your name ") + chalk.bold.white.bgRed("buddy?\n"));
+console.log(chalk.bold.blue("Welcome to How well do you know Sreejith,")+chalk.bold.white.bgBlue(userName)+"!!\n");
 
-console.log(chalk.bold.yellow("Let's the battle begin!\n"));
+console.log(chalk.bold.yellow("Let's see if you really know me after all\n"));
 }
 
 function play(question,answer){
 var userAns = readlineSync.question(question);
 if (userAns===answer){
-  console.log(chalk.bold.green("Nice One there Dr. Banner!!\n"))
+  console.log(chalk.bold.green("Not Bad Kid. Not Bad at all!\n"))
   scoreboard = scoreboard + 1;
 }else {
-    console.log(chalk.red.bold("Uh-Oh. You Should've gone for the head\n"))
+    console.log(chalk.red.bold("*Evil Laugh*! And you thought you knew me well?!?\n"))
   scoreboard = scoreboard - 1;
 }
 console.log("Current Score :"+scoreboard +"\n");
@@ -29,20 +29,20 @@ var highscore = [{
 function letsplay(){
 
 var questions = [{
-  question : chalk.bold.cyan(("Who is the oldest Avenger?")+chalk.bold.blue("\nA.Captain America \nB.Captain Marvel \nC.Winter Soldier \nD.Thor\n")),
-  answer : "D"
+  question : chalk.bold.cyan(("What's my pet name?")+chalk.bold.blue("\nA.Sree \nB.Chinnu \nC.Santu \nD.Raju\n")),
+  answer : "C"
 },
 {
-  question : "Who made Spiderman an Avenger? \nA.Iron Man\nB.Ronin\nC.Dr Strange\n",
+  question : "Which is my Favouite Color? \nA.Pitch Black\nB.Bloody Red\nC.Persian Blue\nD.Neon Green\n",
   answer : "A"
 },
 {
-  question : "Which stone was embedded in Vision?\nA.Power Stone \nB.Mind Stone \nC.Reality Stone \nD.Time Stone\n",
-  answer : "B"
+  question : "Which is my favourite Cinematic Universe?\nA.Marvel \nB.DC \nC.The Boys \nD.Star Wars\n",
+  answer : "A"
 },
 {
-  question : "What was the home Planet of Thanos called? \nA.Morag \nB.Knowhere \nC.Titan \nD.Ego\n",
-  answer : "C"
+  question : "Which language am I most comfortable in? \nA.Malayalam \nB.Hindi \nC.Kannada \nD.English\n",
+  answer : "B"
 }]
 
 
@@ -52,7 +52,7 @@ var questions = [{
 }
 }
 
-console.log(chalk.green.bold("Your final score is: ") + chalk.yellow.bold(scoreboard));
+
 console.log("");
 
 function endgame(){
@@ -60,7 +60,7 @@ if(scoreboard === highscore[0].score)
 {
   console.log(chalk.blueBright.bold("YAYAYYAYA!!! You scored is the highest! Send a screenshot of your score and we'll update it with your deetails!! Congratulations!"));
 }else{
-  console.log(chalk.redBright.bold("Ahhh. You have still much to learn, go back and rewatch them \n and come back Challenger"))
+  console.log(chalk.redBright.bold("Ahhh. You have still much to learn, come back and try again Next Time"))
 }}
 
 welcomeMessage();
