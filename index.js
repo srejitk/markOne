@@ -30,10 +30,6 @@ function letsplay() {
 
   var questions = [
     {
-    question: chalk.bold.cyan(("Who's my favourite hero?") + chalk.bold.blue("\nA.Kevin Fiege \nB.Arishem the Judge \nC.Eson the Searcher \nD.Mephisto\n")),
-    answer: "A"
-  },
-    {
     question: chalk.bold.cyan(("Who's my favourite hero?") + chalk.bold.blue("\nA.Spiderman \nB.Batman \nC.Shaang Chi \nD.StarLord\n")),
     answer: "A"
   },{
